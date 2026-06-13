@@ -14,7 +14,7 @@ description:
     ja_JP: "Provide file output."
   llm: "Provide file output."
 parameters:
-  - name: base64_content
+  - name: content_base64
     type: string
     required: true
     label:
