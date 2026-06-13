@@ -82,6 +82,25 @@ pip install -r requirements.txt
 python main.py
 ```
 
+## パッケージ化
+
+Dify Plugin CLI を使って、プラグインを `.difypkg` ファイルにパッケージ化します。
+
+```bash
+dify plugin package .
+```
+
+別ディレクトリから実行する場合は、このリポジトリのパスを指定します。
+
+```bash
+dify plugin package /path/to/dify_file_outputer
+```
+
+コマンドが成功すると、カレントディレクトリに `.difypkg` ファイルが生成されます。Dify のプラグイン管理画面から、このファイルをアップロードしてインストールできます。
+
+パッケージに含めないファイルは `.difyignore` で管理します。仮想環境、キャッシュ、生成済みパッケージなどは含めないようにしてください。
+
+
 ## ファイル構成
 
 ```text
