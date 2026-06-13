@@ -1,0 +1,34 @@
+identity:
+  name: "file-outputer"
+  author: "mikoto2000"
+  label:
+    en_US: "file-outputer"
+    zh_Hans: "file-outputer"
+    pt_BR: "file-outputer"
+    ja_JP: "file-outputer"
+description:
+  human:
+    en_US: "Provide file output."
+    zh_Hans: "Provide file output."
+    pt_BR: "Provide file output."
+    ja_JP: "Provide file output."
+  llm: "Provide file output."
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+      ja_JP: クエリ文字列
+    human_description:
+      en_US: "Provide file output."
+      zh_Hans: "Provide file output."
+      pt_BR: "Provide file output."
+      ja_JP: "Provide file output."
+    llm_description: "Provide file output."
+    form: llm
+extra:
+  python:
+    source: tools/file-outputer.py
