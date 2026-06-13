@@ -14,21 +14,42 @@ description:
     ja_JP: "Provide file output."
   llm: "Provide file output."
 parameters:
-  - name: query
+  - name: base64_content
     type: string
     required: true
     label:
-      en_US: Query string
-      zh_Hans: 查询语句
-      pt_BR: Query string
-      ja_JP: クエリ文字列
+      en_US: Base64 content
+      ja_JP: Base64 エンコード済みデータ
     human_description:
-      en_US: "Provide file output."
-      zh_Hans: "Provide file output."
-      pt_BR: "Provide file output."
-      ja_JP: "Provide file output."
-    llm_description: "Provide file output."
+      en_US: Base64-encoded binary content.
+      ja_JP: Base64 エンコードされたバイナリ内容です。
+    llm_description: Base64 encoded binary data.
     form: llm
+
+  - name: output_filename
+    type: string
+    required: true
+    label:
+      en_US: Output filename
+      ja_JP: 出力ファイル名
+    human_description:
+      en_US: Output filename.
+      ja_JP: 出力ファイル名です。
+    llm_description: Output filename, for example result.xlsx, result.pdf, result.zip.
+    form: llm
+
+  - name: mime_type
+    type: string
+    required: false
+    label:
+      en_US: MIME type
+      ja_JP: MIME type
+    human_description:
+      en_US: MIME type of the output file.
+      ja_JP: 出力ファイルの MIME type です。
+    llm_description: MIME type, for example application/pdf or application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.
+    form: llm
+
 extra:
   python:
     source: tools/file-outputer.py
