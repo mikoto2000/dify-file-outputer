@@ -1,4 +1,7 @@
 {
-	"name": "Node.js",
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:4-24-trixie"
+  "name": "Node.js",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:4-24-trixie",
+  "runArgs": [
+    "--add-host=host.docker.internal:host-gateway"
+  ],
 }
