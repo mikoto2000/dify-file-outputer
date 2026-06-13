@@ -175,3 +175,6 @@ Thumbs.db
 # Dify plugin packages
 #  To prevent packaging repetitively
 *.difypkg
+
+.devcontainer/
+
